@@ -7,13 +7,14 @@ function range_vision(number) {
 
     digitos.some((digito, index)=>{
         const digitosIzquierda = digitos.slice(0,index).reverse()
-        const valorDeVision = digitosIzquierda.reduce((valorAnterior, valorActual) => {
+        const digitosDerecha = digitos.slice(index+1)
+        const valorDeVision = digitosDerecha.reduce((valorAnterior, valorActual) => {
             return valorAnterior + valorActual;
           }, 0);
         console.log(valorDeVision)
     })
 
-    console.log(digitos);
+
 }
 
 console.log(range_vision(12305))
